@@ -1882,8 +1882,8 @@ input:checked ~ nav > ul > li {
 }
 
 .project.isVisible {
-  -webkit-animation: fadediv 1s ease-in-out 0.1s forwards;
-          animation: fadediv 1s ease-in-out 0.1s forwards;
+  -webkit-animation: fadebox 1s ease-in-out 0.1s forwards;
+          animation: fadebox 1s ease-in-out 0.1s forwards;
 }
 
 .skill-box.isVisible, .second-footer.isVisible {
