@@ -1830,11 +1830,33 @@ input:checked ~ nav > ul > li {
 }
 
 @media screen and (max-width: 360px) {
-  .sub-title {
-    font-size: 22px;
+  #nav-bar {
+    padding-left: 25px;
+    padding-right: 25px;
   }
-  .main-h, .left-block h1, .do-title, .footer-title, h1 {
+  input + label {
+    right: 25px;
+  }
+  #hero-section {
+    padding: 0;
+  }
+  .hero-container {
+    padding-left: 25px;
+    padding-left: 25px;
+  }
+  #page-section {
+    padding-right: 25px;
+    padding-left: 25px;
+    margin: 0;
+  }
+  .sub-title {
+    font-size: 23px;
+  }
+  .main-h, .left-block h1, h1 {
     font-size: 32px;
+  }
+  .do-title, .footer-title {
+    font-size: 28px;
   }
   .my-description {
     font-size: 16px;
@@ -1846,7 +1868,7 @@ input:checked ~ nav > ul > li {
 
 @media screen and (max-width: 320px) {
   .sub-title {
-    font-size: 19px;
+    font-size: 20px;
   }
   .footer-title {
     font-size: 29px;
