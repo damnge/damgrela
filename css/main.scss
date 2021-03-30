@@ -1590,15 +1590,16 @@ $font-header:'Mulish', sans-serif;
     margin-bottom:25px;
     max-width: 150px;
 }
+
 }
 
 @media screen and (max-width: 360px){
 
 
     .sub-title {
-        font-size: 24px;
+        font-size: 22px;
     }
-    .main-h, .left-block h1, .do-title, h1 {
+    .main-h, .left-block h1, .do-title, .footer-title, h1 {
         font-size: 32px;   
     }
 
@@ -1613,6 +1614,15 @@ $font-header:'Mulish', sans-serif;
         max-width: 220px;
     }
     
+}
+
+@media screen and (max-width: 320px) {
+    .sub-title {
+        font-size: 19px;
+    }
+    .footer-title {
+        font-size: 29px;
+    }
 }
 
 // ANIMATION ON SCROLL

@@ -1831,9 +1831,9 @@ input:checked ~ nav > ul > li {
 
 @media screen and (max-width: 360px) {
   .sub-title {
-    font-size: 24px;
+    font-size: 22px;
   }
-  .main-h, .left-block h1, .do-title, h1 {
+  .main-h, .left-block h1, .do-title, .footer-title, h1 {
     font-size: 32px;
   }
   .my-description {
@@ -1841,6 +1841,15 @@ input:checked ~ nav > ul > li {
   }
   #wantis-splash {
     max-width: 220px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .sub-title {
+    font-size: 19px;
+  }
+  .footer-title {
+    font-size: 29px;
   }
 }
 
