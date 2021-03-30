@@ -101,7 +101,7 @@ $(window).on("load", function(){
 const options = {
   root: null, // use the document's viewport as the container
   rootMargin: '0px', // % or px - offsets added to each side of the intersection 
-  threshold: 0.3 // percentage of the target element which is visible
+  threshold: 0.1 // percentage of the target element which is visible
 }
 const playThis = document.querySelectorAll('.observer-play');
 // Callback docs: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Targeting_an_element_to_be_observed

@@ -1611,7 +1611,7 @@ $font-header:'Mulish', sans-serif;
         padding-left: 25px;
         padding-left: 25px;
     }
-    #page-section {
+    #page-section, #call-to-action {
         padding-right: 25px;
         padding-left: 25px;
         margin: 0;
@@ -1623,11 +1623,11 @@ $font-header:'Mulish', sans-serif;
         font-size: 23px;
     }
     .main-h, .left-block h1, h1 {
-        font-size: 32px;   
+        font-size: 33px;   
     }
 
     .do-title, .footer-title, {
-        font-size: 28px;
+        font-size: 33px;
     }
 
     
@@ -1647,8 +1647,8 @@ $font-header:'Mulish', sans-serif;
     .sub-title {
         font-size: 20px;
     }
-    .footer-title {
-        font-size: 29px;
+    .footer-title, .do-title {
+        font-size: 31px;
     }
 }
 
@@ -1657,13 +1657,14 @@ $font-header:'Mulish', sans-serif;
 .project, .skill-box, .second-footer {
     transition: opacity 1s;
     opacity: 0;
+
 }
 .project.isVisible{
-    transition: opacity 1s;
-    opacity: 1;
+    animation: fadediv 1s ease-in-out 0.1s forwards;
+
 }
    .skill-box.isVisible, .second-footer.isVisible {
-    animation: fadebox 1s ease-in-out 0.1s forwards;
+    animation: fadebox 1s ease-in-out 0.3s forwards;
 }
 
 .do-title, .footer-title,{ transition: opacity 1s;

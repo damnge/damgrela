@@ -1844,7 +1844,7 @@ input:checked ~ nav > ul > li {
     padding-left: 25px;
     padding-left: 25px;
   }
-  #page-section {
+  #page-section, #call-to-action {
     padding-right: 25px;
     padding-left: 25px;
     margin: 0;
@@ -1853,10 +1853,10 @@ input:checked ~ nav > ul > li {
     font-size: 23px;
   }
   .main-h, .left-block h1, h1 {
-    font-size: 32px;
+    font-size: 33px;
   }
   .do-title, .footer-title {
-    font-size: 28px;
+    font-size: 33px;
   }
   .my-description {
     font-size: 16px;
@@ -1870,8 +1870,8 @@ input:checked ~ nav > ul > li {
   .sub-title {
     font-size: 20px;
   }
-  .footer-title {
-    font-size: 29px;
+  .footer-title, .do-title {
+    font-size: 31px;
   }
 }
 
@@ -1882,14 +1882,13 @@ input:checked ~ nav > ul > li {
 }
 
 .project.isVisible {
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-  opacity: 1;
+  -webkit-animation: fadediv 1s ease-in-out 0.1s forwards;
+          animation: fadediv 1s ease-in-out 0.1s forwards;
 }
 
 .skill-box.isVisible, .second-footer.isVisible {
-  -webkit-animation: fadebox 1s ease-in-out 0.1s forwards;
-          animation: fadebox 1s ease-in-out 0.1s forwards;
+  -webkit-animation: fadebox 1s ease-in-out 0.3s forwards;
+          animation: fadebox 1s ease-in-out 0.3s forwards;
 }
 
 .do-title, .footer-title {
