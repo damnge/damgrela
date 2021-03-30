@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script>
+    <title>Dam Grela</title>
+</head>
+<body>
+    <div class="loader">
+        <svg id="logoload" width="152" height="151" viewBox="0 0 152 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M136.484 149.574L1 149.574L1 14.0898L136.484 149.574Z" stroke="#333333" stroke-width="2"/>
+            <path d="M151 1.0005L15.5161 1.0005L151 136.484V49.3333H109.766" stroke="#333333" stroke-width="2"/>
+            </svg>
+            
+    </div>
+    <nav id="nav-bar"> 
+        <div class="container n-container">
+            <div class="logo" id="logo" onclick="rotate()">
+                <a href="#header-section"><img class="sign animate__animated animate__fadeIn animate__delay-2s" id="sign" src="img/dgh.svg" alt=""></a>
+            </div>
+
+            <div class="nav-menu animate__animated animate__fadeInRight animate__delay-2s">
+                <button class="portfolio link under"><a href="index.html">PORTFOLIO</a></button>
+                <div class="button-wrapper">
+                    
+                <div class="button">
+                   <a href="mailto:dam.grela@gmail.com"  onclick="ShowSecond()">Say Hello.</a>
+                    <svg>
+                    <polyline class="o1" points="0 0, 130 0, 130 35, 0 35, 0 0"></polyline>
+                    <polyline class="o2" points="0 0, 130 0, 130 35, 0 35, 0 0"></polyline>
+                </svg>
+                <div class="hide" id="show-email">Email Copied</div>
+        
+                </div>
+            </div>
+        
+            </div>
+        </div>
+        <input class="check" id="burger" type="checkbox" />
+                <label id="burger" for="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <nav>    
+                <ul>
+                    <li><a href="index.html">PORTFOLIO</a></li>
+                    <li style="max-height: 83px;">
+                        <a href="mailto:dam.grela@gmail.com" onclick="ShowMobile()">SAY HELLO.</a>
+                        <a href="#" class="hide" id="email-mobile">EMAIL COPIED</a>
+                    </li>
+                    <li class="mob-link">
+                        <a href="https://www.linkedin.com/in/damian-grela-2405a31b8/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/damnge"><i class="fab fa-github"></i></a>
+                    <a href="https://codepen.io/damgrela"><i class="fab fa-codepen"></i></a>
+                </li>
+                
+                </ul>
+                </label>  
+                </nav>
+            </nav>
+    <header id="header-section">
+       <div class="header-container">
+           <div class="container center">
+               <h4 class="animate__animated animate__fadeIn animate__delay-2s">Work Showcase</h4>
+               <h1 class="main-title animate__animated animate__fadeInUp animate__delay-2s">Wantis App</h1>
+               <div class="animate__animated animate__fadeIn animate__delay-3s">
+               <div class="divider-project shine"></div> 
+               </div>
+               <p id="header-description" class="animate__animated animate__fadeInUp animate__delay-2s">
+                This is a shopping application design for the concept project Wantis. The whole process involved: sketching UX flows, sitemaps, wireframing, prototyping, and designing a logo. With this base structure, further exploration of visual styles, color, and typography led to the final beautiful, interactive product with a thoughtful user experience.
+               </p>
+               <div class="main-btn-wrapper live-btn">
+               <a href="https://uniteapp.webflow.io/" class="main-btn btn-effect fade" data-sm-link-text="Let's go"><span>Live Website</span></a>
+            </div>
+           </div>
+           
+       </div>
+
+        
+    </header>
+    
+<section id="page-section">
+    <div class="photo-container animate__animated animate__fadeInUp animate__delay-2s">
+        <img class="screenshot" src="mockups/wantisland.jpg" alt="">
+        
+    </div>
+    <div class="container">
+        <div class="divider skill-divider"></div>
+        </div>
+    </section>
+      
+        <footer id="call-to-action">
+            <div class="container center">
+                <h1 class="footer-title observer-play">Want to create?</h1>
+                <div class="fade-divider observer-play">
+                <div class="divider-headline shine short-center"></div>
+                </div>
+                <div class="second-footer observer-play">
+                <p>If you are interested to work together let's have a chat so we can set the ball rolling. Don't worry, the coffee is on me. If we are a good fit, I will give you a time and cost estimate.</p>
+               <div class="tooltip">
+                <a class="main-btn btn-effect" data-sm-link-text="Let's talk" href="mailto:dam.grela@gmail.com" onmouseout="outFunc()"><span>say hello.</span></a>
+                <span class="tooltiptext" id="myTooltip">copy to clipboard</span>
+                </div>
+          
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/damian-grela-2405a31b8/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/damnge"><i class="fab fa-github"></i></a>
+                    <a href="https://codepen.io/damgrela"><i class="fab fa-codepen"></i></a>
+                
+                </div>
+                <div class="copyright">© Copyright – Damian Grela</div>
+            </div>
+            </div>
+        </footer>
+       
+    
+
+<script src="script.js"></script>
+
+</body>
+</html>

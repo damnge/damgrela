@@ -1,0 +1,14 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 150px; height: 150px;"><style>
+     .line-eye2 {animation:line-eye2-look 3s infinite;}
+     @keyframes line-eye2-look {
+         0%{transform: translate3d(4px, 0, 0);}
+         40%{transform: translate3d(-4px, 0, 0);}
+         60%{transform: translate3d(4px, 0, 0);}
+         100%{transform: translate3d(4px, 0, 0);}
+     }
+     @media (prefers-reduced-motion: reduce) {
+         .line-eye2 {
+             animation: none;
+         }
+     }
+    </style><rect class="stroke1 fill1" x="12" y="16" width="75" height="68" rx="4" fill="#fff" stroke="#000" stroke-width="2px" style="animation-duration: 3s;"></rect><path class="stroke1 fill1" d="M12 20C12 17.7909 13.7909 16 16 16H83C85.2091 16 87 17.7909 87 20V34H12V20Z" fill="#fff" stroke="#000" stroke-width="2px" style="animation-duration: 3s;"></path><circle class="stroke1 fill1" cx="22" cy="25" r="3" fill="#fff" stroke="#000" stroke-width="2px" style="animation-duration: 3s;"></circle><circle class="stroke1 fill1" cx="34" cy="25" r="3" fill="#fff" stroke="#000" stroke-width="2px" style="animation-duration: 3s;"></circle><circle class="stroke1 fill1" cx="46" cy="25" r="3" fill="#fff" stroke="#000" stroke-width="2px" style="animation-duration: 3s;"></circle><path class="stroke2 fill2" d="M74 59.5C74 61.6977 63.031 73 49.5 73C35.969 73 25 61.3837 25 59.5C25 57.6163 35.969 46 49.5 46C63.031 46 74 57.3023 74 59.5Z" fill="#fff" stroke="#000" stroke-width="2px" style="animation-duration: 3s;"></path><g class="line-eye2" style="animation-duration: 3s;"><circle class="stroke2 fill2" cx="49.5" cy="59.5" r="8.5" fill="#fff" stroke="#000" stroke-width="2px" style="animation-duration: 3s;"></circle><circle class="stroke2 fill2" cx="49.5" cy="59.5" r="3.5" fill="#fff" stroke="#000" stroke-width="2px" style="animation-duration: 3s;"></circle></g></svg>
