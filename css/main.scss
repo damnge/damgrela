@@ -88,13 +88,14 @@ $font-header:'Mulish', sans-serif;
         background: white;
         height: 100vh;
         width: 100vw;
-        top:0;
+        top:-25px;
         position: fixed;
         z-index: 10;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        align-content: center;
         color: #333;
       }
 
@@ -507,7 +508,7 @@ $font-header:'Mulish', sans-serif;
            #page-section {
             margin-right: 24px;
             margin-left: 24px;
-            padding: 60px;
+            padding: 40px;
            }
 
            .headline-container {
@@ -1057,7 +1058,7 @@ $font-header:'Mulish', sans-serif;
         #call-to-action {
             margin-right: 24px;
             margin-left: 24px;
-            padding: 50px 60px 24px;
+            padding: 50px 40px 24px;
         }
 
         .footer-title {
@@ -1533,8 +1534,8 @@ $font-header:'Mulish', sans-serif;
     #nav-bar {
         margin: 0;
         padding-top: 25px;
-        padding-right: 36px;
-        padding-left: 36px;
+        padding-right: 30px;
+        padding-left: 30px;
         position: fixed;
         background-color: white;
         max-height: 65px;
@@ -1553,13 +1554,13 @@ $font-header:'Mulish', sans-serif;
     }
 #hero-section {
     min-height: auto;
-    padding: 16px;
+    padding: 30px;
 }
 
 .hero-container {
     padding-top: 120px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .headline-container, .my-description {
@@ -1572,13 +1573,20 @@ $font-header:'Mulish', sans-serif;
 
 .main-h, .do-title, .left-block h1, h1{
     font-size:40px;
-} 
-
-
-#page-section {
-    padding-right: 20px;
-    padding-left: 20px;
 }
+
+input + label {
+    right: 30px;
+
+}
+
+
+#page-section, #call-to-action {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0;
+}
+
 #wantis-splash {
     max-width: 290px;
     margin-left:0px;
@@ -1590,35 +1598,15 @@ $font-header:'Mulish', sans-serif;
     margin-bottom:25px;
     max-width: 150px;
 }
+.copyright{
+    padding:0;
+}
 
 }
 
 @media screen and (max-width: 360px){
 
-    #nav-bar {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
 
-    input + label {
-        right: 25px;
-
-    }
-    #hero-section {
-        padding: 0;
-    }
-    .hero-container {
-        padding-left: 25px;
-        padding-left: 25px;
-    }
-    #page-section, #call-to-action {
-        padding-right: 25px;
-        padding-left: 25px;
-        margin: 0;
-    }
-
-
-    
     .sub-title {
         font-size: 23px;
     }

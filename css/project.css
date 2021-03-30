@@ -116,15 +116,28 @@
   }
 }
 
-@media screen and (max-width: 479px) {
-  .header {
+@media screen and (max-width: 500px) {
+  #nav-bar {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  #header-section {
     min-height: auto;
-    padding: 16px;
+    padding: 30px;
   }
   .header-container {
-    padding-top: 120px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-top: 100px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  #page-section {
+    margin: 0;
+    padding-right: 30px;
+    padding-right: 30px;
+  }
+  #call-to-action {
+    padding: 30px;
+    margin: 0;
   }
   .main-title {
     font-size: 35px;
