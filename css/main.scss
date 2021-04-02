@@ -1504,9 +1504,6 @@ $font-header:'Mulish', sans-serif;
 
     .my-description, .paragraph-action p, p{ font-size: 16px;}
 
-    .divider-headline {
-        max-width: 350px;
-    }
 
     .main-btn-wrapper, .down {
         position: relative;
@@ -1564,15 +1561,19 @@ $font-header:'Mulish', sans-serif;
 }
 
 .headline-container, .my-description {
-    max-width: 300px;
+    max-width: 400px;
 }
 
 .sub-title {
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .main-h, .do-title, .left-block h1, h1{
-    font-size:40px;
+    font-size:36px;
+}
+
+.divider-headline {
+    max-width: 400px;
 }
 
 input + label {
@@ -1612,6 +1613,25 @@ input + label {
 }
 
 
+}
+
+@media screen and (max-width: 430px){
+
+.headline-container, .my-description {
+    max-width: 350px;
+}
+
+.sub-title {
+    font-size: 23px;
+}
+
+.main-h, .do-title, .left-block h1, h1{
+    font-size:34px;
+}
+
+.divider-headline {
+    max-width: 350px;
+}
 }
 
 @media screen and (max-width: 360px){

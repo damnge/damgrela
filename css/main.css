@@ -1755,9 +1755,6 @@ input:checked ~ nav > ul > li {
   .my-description, .paragraph-action p, p {
     font-size: 16px;
   }
-  .divider-headline {
-    max-width: 350px;
-  }
   .main-btn-wrapper, .down {
     position: relative;
     -webkit-transition: all .5s ease-in-out;
@@ -1807,13 +1804,16 @@ input:checked ~ nav > ul > li {
     padding-left: 0px;
   }
   .headline-container, .my-description {
-    max-width: 300px;
+    max-width: 400px;
   }
   .sub-title {
-    font-size: 30px;
+    font-size: 28px;
   }
   .main-h, .do-title, .left-block h1, h1 {
-    font-size: 40px;
+    font-size: 36px;
+  }
+  .divider-headline {
+    max-width: 400px;
   }
   input + label {
     right: 30px;
@@ -1863,6 +1863,21 @@ input:checked ~ nav > ul > li {
       -webkit-transform: translateY(0px);
               transform: translateY(0px);
     }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .headline-container, .my-description {
+    max-width: 350px;
+  }
+  .sub-title {
+    font-size: 23px;
+  }
+  .main-h, .do-title, .left-block h1, h1 {
+    font-size: 34px;
+  }
+  .divider-headline {
+    max-width: 350px;
   }
 }
 
