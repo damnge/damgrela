@@ -38,6 +38,11 @@ $font-header:'Mulish', sans-serif;
     border: 8px solid white;
   }
 
+  ::-moz-selection { background: #333;
+color: white; }
+::selection { background: #333;
+color: white; }
+
 
     //    NAV BAR & HERO SECTION
 
@@ -605,7 +610,7 @@ $font-header:'Mulish', sans-serif;
 
           .fade {
             opacity: 0;
-            animation: fadeit 1s ease-in 2.3s forwards;
+            animation: fadeit 1s ease-in 2.2s forwards;
             transition: all .5s;
     
 

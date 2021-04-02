@@ -34,6 +34,16 @@ html, body {
   border: 8px solid white;
 }
 
+::-moz-selection {
+  background: #333;
+  color: white;
+}
+
+::selection {
+  background: #333;
+  color: white;
+}
+
 h1 {
   font-family: "Mulish", sans-serif;
   font-size: 55px;
@@ -682,8 +692,8 @@ input:checked ~ nav > ul > li {
 
 .fade {
   opacity: 0;
-  -webkit-animation: fadeit 1s ease-in 2.3s forwards;
-          animation: fadeit 1s ease-in 2.3s forwards;
+  -webkit-animation: fadeit 1s ease-in 2.2s forwards;
+          animation: fadeit 1s ease-in 2.2s forwards;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
