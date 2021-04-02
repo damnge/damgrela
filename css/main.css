@@ -692,8 +692,8 @@ input:checked ~ nav > ul > li {
 
 .fade {
   opacity: 0;
-  -webkit-animation: fadeit 1s ease-in 2.2s forwards;
-          animation: fadeit 1s ease-in 2.2s forwards;
+  -webkit-animation: fadeit 1s ease-in 2.3s forwards;
+          animation: fadeit 1s ease-in 2.3s forwards;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
