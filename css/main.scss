@@ -241,14 +241,14 @@ color: white; }
               .o1 {
                   stroke: #333;
                   fill: transparent;
-                  transition: all 1s ease-in-out;
+                  transition: all 1.3s ease-in-out;
               }
       
               .o2 {
                   stroke: white;
                   stroke-dasharray: 30 420;
                   stroke-dashoffset: 30;
-                  transition: all 1s ease-in-out;
+                  transition: all 1.3s ease-in-out;
               }
           }
       
@@ -310,7 +310,7 @@ color: white; }
       .under::before {
           transform-origin: 100% 50%;
           transform: scale3d(0, 1, 1);
-          transition: transform 0.3s;
+          transition: transform 0.5s;
       }
       
       .under:hover::before {
