@@ -88,7 +88,7 @@ $font-header:'Mulish', sans-serif;
         background: white;
         height: 100vh;
         width: 100vw;
-        top:-25px;
+        top:-30px;
         position: fixed;
         z-index: 10;
         display: flex;
@@ -375,7 +375,7 @@ $font-header:'Mulish', sans-serif;
         height:0px;
         z-index: 3;
         transition: .5s;
-        transition-delay: .5s;
+        transition-delay: .3s;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -412,7 +412,7 @@ $font-header:'Mulish', sans-serif;
         > ul {
           > li {
             opacity: 1;
-            transition-delay: .5s;
+            transition-delay: .4s;
           }
         }
       }
@@ -605,14 +605,14 @@ $font-header:'Mulish', sans-serif;
 
           .fade {
             opacity: 0;
-            animation: fadeit 1s ease-in 2s forwards;
-            transition: all .3s;
+            animation: fadeit 1s ease-in 2.3s forwards;
+            transition: all .5s;
     
 
           }
 
           @keyframes fadeit {
-              from {opacity: 0; transform:translateY(15px) ;}
+              from {opacity: 0; transform:translateY(0px) ;}
               to {opacity: 1; transform:translateY(0px) ;}
           }
 
@@ -1601,6 +1601,16 @@ input + label {
 .copyright{
     padding:0;
 }
+
+.fade {
+    animation: fadeit 1s ease-in 2.2s forwards;
+
+  }
+@keyframes fadeit {
+    from {opacity: 0; transform:translateY(0px) ;}
+    to {opacity: 1; transform:translateY(0px) ;}
+}
+
 
 }
 
