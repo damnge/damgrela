@@ -109,20 +109,39 @@ button:focus {
   color: #333;
 }
 
+#logoload {
+  position: relative;
+  top: -25px;
+}
+
 svg#logoload path {
-  stroke-dasharray: 200;
+  stroke-dasharray: 150;
   -webkit-animation: dashoffsets 4s linear infinite backwards;
           animation: dashoffsets 4s linear infinite backwards;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
 @-webkit-keyframes dashoffsets {
-  to {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
     stroke-dashoffset: 800;
   }
 }
 
 @keyframes dashoffsets {
-  to {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  100% {
     stroke-dashoffset: 800;
   }
 }

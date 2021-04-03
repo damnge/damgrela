@@ -104,15 +104,21 @@ color: white; }
         color: #333;
       }
 
+      #logoload {
+          position: relative;
+          top: -25px;
+      }
+
       svg#logoload path{
-        stroke-dasharray: 200;
+        stroke-dasharray: 150;
         animation: dashoffsets 4s linear infinite backwards;
+        transition: opacity 0.2s;
     }
 
     @keyframes dashoffsets {
-        to {
-            stroke-dashoffset: 800;
-        }
+        0% {opacity: 0;}
+        25% {opacity: 1;}
+        100%{stroke-dashoffset: 800;}
     }
 
 
