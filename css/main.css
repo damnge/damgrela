@@ -1917,13 +1917,13 @@ input:checked ~ nav > ul > li {
   }
 }
 
-.project, .skill-box, .second-footer, .phone, .screenshot-wantis {
+.project, .skill-box, .second-footer, .phone, .screenshot-wantis, .screenshot {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   opacity: 0;
 }
 
-.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible {
+.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible {
   -webkit-animation: fadebox 1s ease-in-out 0.1s forwards;
           animation: fadebox 1s ease-in-out 0.1s forwards;
 }

@@ -1677,12 +1677,12 @@ input + label {
 
 // ANIMATION ON SCROLL
 
-.project, .skill-box, .second-footer, .phone, .screenshot-wantis {
+.project, .skill-box, .second-footer, .phone, .screenshot-wantis, .screenshot {
     transition: opacity 1s;
     opacity: 0;
 
 }
-.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible {
+.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible {
     animation: fadebox 1s ease-in-out 0.1s forwards;
 
 }
