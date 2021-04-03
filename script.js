@@ -1,3 +1,14 @@
+$(window).on("load", function(){
+  setTimeout(function() {
+    $(".loader").fadeOut("slow");
+   },600);
+    setTimeout(function() {
+      $('html, body').css({
+        'position':'relative'
+      })},700);
+});
+
+
 window.onbeforeunload = function () {
   setTimeout(function(){
   window.scrollTo(0, 0);}, 1000);
@@ -88,12 +99,6 @@ $(document).ready(function(){
   $(this).scrollTop(0);
 });
 
-$(window).on("load", function(){
-  setTimeout(function() {
-    $(".loader").fadeOut("slow");
-  },1000);
-  
-  });
 
   // INTERSECTION OBSERVER
 

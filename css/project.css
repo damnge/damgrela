@@ -26,6 +26,10 @@
   flex: 1;
 }
 
+.wantis-intro {
+  padding-bottom: 40px;
+}
+
 .main-title {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -63,6 +67,34 @@
   flex: 1;
 }
 
+#phone {
+  padding-top: 100px;
+}
+
+.phone {
+  border: solid 15px #EFF9FF;
+  max-width: 280px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: white;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.wantis-showcase {
+  max-width: 100%;
+  border-radius: 2%;
+}
+
 .screenshot {
   position: relative;
   top: -300px;
@@ -74,6 +106,17 @@
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
+}
+
+.screenshot-wantis {
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  margin-bottom: 100px;
 }
 
 .second {

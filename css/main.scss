@@ -15,11 +15,11 @@ $font-header:'Mulish', sans-serif;
   }
     html, body {
         height: 100%;
-        position: relative;
         margin: 0;
         background-color: white;
         color: #333;
         scroll-behavior: smooth;
+        position: fixed;
        }
 
        /* width */
@@ -93,7 +93,7 @@ color: white; }
         background: white;
         height: 100vh;
         width: 100vw;
-        top:-30px;
+        top:0;
         position: fixed;
         z-index: 10;
         display: flex;
@@ -590,7 +590,7 @@ color: white; }
 
     
           .main-btn {
-              text-align: center;
+            text-align: center;
             letter-spacing: 0.1em;
             cursor: pointer;
             font-size: 14px;
@@ -610,11 +610,13 @@ color: white; }
 
           .fade {
             opacity: 0;
-            animation: fadeit 1s ease-in 2.1s forwards;
+            animation: fadeit 1s ease-in 1.3s forwards;
             transition: all .5s;
-    
-
           }
+          .fade-headline-div {
+            opacity: 0;
+            animation: fadediv 1s ease-in 1.6s forwards;
+            transition: all .5s;}
 
           @keyframes fadeit {
               from {opacity: 0; transform:translateY(0px) ;}
@@ -1608,14 +1610,6 @@ input + label {
     padding:0;
 }
 
-.fade {
-    animation: fadeit 1s ease-in 2.2s forwards;
-
-  }
-@keyframes fadeit {
-    from {opacity: 0; transform:translateY(0px) ;}
-    to {opacity: 1; transform:translateY(0px) ;}
-}
 
 
 }
@@ -1649,7 +1643,7 @@ input + label {
         font-size: 33px;   
     }
 
-    .do-title, .footer-title, {
+    .do-title, .footer-title {
         font-size: 33px;
     }
 
@@ -1677,12 +1671,12 @@ input + label {
 
 // ANIMATION ON SCROLL
 
-.project, .skill-box, .second-footer {
+.project, .skill-box, .second-footer, .phone, .screenshot-wantis {
     transition: opacity 1s;
     opacity: 0;
 
 }
-.project.isVisible{
+.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible {
     animation: fadebox 1s ease-in-out 0.1s forwards;
 
 }
@@ -1690,7 +1684,7 @@ input + label {
     animation: fadebox 1s ease-in-out 0.3s forwards;
 }
 
-.do-title, .footer-title,{ transition: opacity 1s;
+.do-title, .footer-title{ transition: opacity 1s;
     opacity: 0;}
 
 .do-title.isVisible, .footer-title.isVisible {
@@ -1702,8 +1696,7 @@ input + label {
 
 .fade-divider {
     opacity: 0;
-    transition: opacity 1s;
-    
+    transition: opacity 1s;  
 }
 
 .fade-divider.isVisible {

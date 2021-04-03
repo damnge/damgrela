@@ -11,11 +11,11 @@ html {
 
 html, body {
   height: 100%;
-  position: relative;
   margin: 0;
   background-color: white;
   color: #333;
   scroll-behavior: smooth;
+  position: fixed;
 }
 
 /* width */
@@ -88,7 +88,7 @@ button:focus {
   background: white;
   height: 100vh;
   width: 100vw;
-  top: -30px;
+  top: 0;
   position: fixed;
   z-index: 10;
   display: -webkit-box;
@@ -692,8 +692,16 @@ input:checked ~ nav > ul > li {
 
 .fade {
   opacity: 0;
-  -webkit-animation: fadeit 1s ease-in 2.1s forwards;
-          animation: fadeit 1s ease-in 2.1s forwards;
+  -webkit-animation: fadeit 1s ease-in 1.3s forwards;
+          animation: fadeit 1s ease-in 1.3s forwards;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.fade-headline-div {
+  opacity: 0;
+  -webkit-animation: fadediv 1s ease-in 1.6s forwards;
+          animation: fadediv 1s ease-in 1.6s forwards;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -1846,34 +1854,6 @@ input:checked ~ nav > ul > li {
   .copyright {
     padding: 0;
   }
-  .fade {
-    -webkit-animation: fadeit 1s ease-in 2.2s forwards;
-            animation: fadeit 1s ease-in 2.2s forwards;
-  }
-  @-webkit-keyframes fadeit {
-    from {
-      opacity: 0;
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-    }
-    to {
-      opacity: 1;
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-    }
-  }
-  @keyframes fadeit {
-    from {
-      opacity: 0;
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-    }
-    to {
-      opacity: 1;
-      -webkit-transform: translateY(0px);
-              transform: translateY(0px);
-    }
-  }
 }
 
 @media screen and (max-width: 430px) {
@@ -1918,13 +1898,13 @@ input:checked ~ nav > ul > li {
   }
 }
 
-.project, .skill-box, .second-footer {
+.project, .skill-box, .second-footer, .phone, .screenshot-wantis {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   opacity: 0;
 }
 
-.project.isVisible {
+.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible {
   -webkit-animation: fadebox 1s ease-in-out 0.1s forwards;
           animation: fadebox 1s ease-in-out 0.1s forwards;
 }
