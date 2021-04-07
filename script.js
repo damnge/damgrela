@@ -37,7 +37,7 @@ function myFunction() {
     rotateLogo.classList.add("sign");
   } else {
     header.classList.remove("sticky");
-    anchor.setAttribute('href','index.html');
+    anchor.setAttribute('href','index');
     rotateLogo.classList.remove("sign");
   }
 }
