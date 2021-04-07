@@ -1700,7 +1700,7 @@ input + label {
     animation: fadebox 1s ease-in-out 0.3s forwards;
 }
 
-.do-title, .footer-title{ transition: opacity 1s;
+.do-title, .footer-title { transition: opacity 1s;
     opacity: 0;}
 
 .do-title.isVisible, .footer-title.isVisible {
