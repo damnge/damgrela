@@ -148,14 +148,21 @@ color: white; }
             animation: unswing  .5s ease-in-out both;
             cursor: pointer;
             }
+
+            .logo img {
+                max-width: 35px;
+                transition: all .3s ease-in-out .1s;
+            }
             .sign {
                 transition: all .3s ease-in-out .3s;
-                max-width: 35px;
+                &:hover {
+                    transform: rotate(180deg);
+                    transition: all .2s ease-in-out .3s;
+                }
             }
-            .sign:hover {
-                transform: rotate(180deg);
-                transition: all .2s ease-in-out .3s;
-            }
+
+            
+            
   
             // LOGO ANIMATION
 
@@ -1257,7 +1264,7 @@ color: white; }
             padding-right: 40px;
     }
 
-    .sign {
+    .logo img {
         max-width: 30px;
     }
 
@@ -1497,6 +1504,7 @@ color: white; }
     .logo{
         animation: none;
         position: static;
+        transition: all .3s ease-in-out .1s;
     }
 
     .sign:hover{transform: none;}

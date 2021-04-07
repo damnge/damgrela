@@ -16,15 +16,20 @@ window.onbeforeunload = function () {
 // ANIMATE LOGO ON SCROLL
 
 window.onscroll = function() {myFunction()};
-        
-var header = document.getElementById("logo");
-var sticky = header.offsetTop;
+const anchor = document.getElementById("logo-link");   
+const header = document.getElementById("logo");
+const rotateLogo = document.getElementById("sign");
+const sticky = header.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
+    anchor.setAttribute('href','#hero-section');
+    rotateLogo.classList.add("sign");
   } else {
     header.classList.remove("sticky");
+    anchor.setAttribute('href','index.html');
+    rotateLogo.classList.remove("sign");
   }
 }
 

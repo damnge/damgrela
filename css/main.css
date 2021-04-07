@@ -175,10 +175,15 @@ header {
   cursor: pointer;
 }
 
+.logo img {
+  max-width: 35px;
+  -webkit-transition: all .3s ease-in-out .1s;
+  transition: all .3s ease-in-out .1s;
+}
+
 .sign {
   -webkit-transition: all .3s ease-in-out .3s;
   transition: all .3s ease-in-out .3s;
-  max-width: 35px;
 }
 
 .sign:hover {
@@ -1499,7 +1504,7 @@ input:checked ~ nav > ul > li {
     padding-left: 40px;
     padding-right: 40px;
   }
-  .sign {
+  .logo img {
     max-width: 30px;
   }
   @-webkit-keyframes unswing {
@@ -1770,6 +1775,8 @@ input:checked ~ nav > ul > li {
     -webkit-animation: none;
             animation: none;
     position: static;
+    -webkit-transition: all .3s ease-in-out .1s;
+    transition: all .3s ease-in-out .1s;
   }
   .sign:hover {
     -webkit-transform: none;
