@@ -1501,18 +1501,6 @@ color: white; }
 }
 
 @media screen and (max-width: 600px) {
-    .logo{
-        animation: none;
-        position: static;
-        transition: all .3s ease-in-out .1s;
-    }
-
-    .sign:hover{transform: none;}
-
-    .rotated-logo {
-        transform: rotate(135deg);
-        transition: all .3s ease-in-out .1s;
-      }
     
     #wantis-splash {
         margin-left: 100px;
@@ -1549,6 +1537,20 @@ color: white; }
 }
 
 @media screen and (max-width: 500px){
+    
+    .logo{
+        animation: none;
+        position: static;
+        transition: all .3s ease-in-out .1s;
+    }
+
+    .sign:hover{transform: none;}
+
+    .rotated-logo {
+        transform: rotate(135deg);
+        transition: all .3s ease-in-out .1s;
+      }
+    
     #nav-bar {
         margin: 0;
         padding-top: 25px;

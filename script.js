@@ -15,6 +15,15 @@ window.onbeforeunload = function () {
 }
 // ANIMATE LOGO ON SCROLL
 
+function rotate() {
+  var img = document.getElementById("sign");
+  img.classList.add("rotated-logo");
+  setTimeout(function(){ img.classList.add("rotated-back")}, 900);
+  setTimeout(function(){ img.classList.remove("rotated-logo")}, 1500);
+  setTimeout(function(){ img.classList.remove("rotated-back")}, 1500);
+  
+  }
+
 window.onscroll = function() {myFunction()};
 const anchor = document.getElementById("logo-link");   
 const header = document.getElementById("logo");
@@ -33,14 +42,6 @@ function myFunction() {
   }
 }
 
-function rotate() {
-    var img = document.getElementById("sign");
-    img.classList.add("rotated-logo");
-    setTimeout(function(){ img.classList.add("rotated-back")}, 900);
-    setTimeout(function(){ img.classList.remove("rotated-logo")}, 1500);
-    setTimeout(function(){ img.classList.remove("rotated-back")}, 1500);
-    
-    }
 
 
 // COPY MY EMAIL 
