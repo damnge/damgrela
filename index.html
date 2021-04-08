@@ -15,7 +15,6 @@
     <title>Dam Grela - Web Designer</title>
     <link rel="icon" type="image/png" href="dg.png">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/c5eb38d5ce.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -28,9 +27,11 @@
     <nav id="nav-bar"> 
         <div class="container">
             <div class="logo" id="logo" onclick="rotate()">
-                <a href="index" id="logo-link"><img class="animate__animated animate__fadeIn animate__delay-1s" id="sign" src="img/dgh.svg" alt=""></a>
+                <div id="f-that-logo" class="animated-logo">
+                <a href="index" id="logo-link"><img id="sign" src="img/dgh.svg" alt=""></a>
+                </div>
             </div>
-            <div class="nav-menu animate__animated animate__fadeInRight animate__delay-1s">
+            <div class="nav-menu animated" id="element-to-animate9">
                 <button class="portfolio link under"><a href="#project1">PORTFOLIO</a></button>
                 <div class="button-wrapper">
                 <div class="button">
@@ -45,7 +46,7 @@
             </div>
         </div>
         <input class="check" id="burger" type="checkbox" />
-                <label id="burger" for="burger" class="animate__animated animate__fadeIn animate__delay-1s">
+                <label id="burger" for="burger">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -69,16 +70,18 @@
     <section id="hero-section">
         <div id="gothere" class="hero-container" loading="lazy">
             <div class="container"> 
-                <div class="headline-container animate__animated animate__fadeInUp animate__delay-1s">  
-                <h1 class="main-h"> Hi, I am Dam</h1>
-                <h2 class="sub-title">Web Designer &</h2>
-                <h2 class="sub-title">Front-end Developer</h2>
-                <div class="fade-headline-div">
-                <div class="divider-headline shine"></div>
+                <div class="headline-container">
+                <div>  
+                <h1 id="element-to-animate1" class="main-h animated"> Hi, I am Dam</h1>
+                <h2 id="element-to-animate2" class="sub-title animated">Web Designer &</h2>
+                <h2 id="element-to-animate3"class="sub-title animated">Front-end Developer</h2>
+                </div>
+                <div id="element-to-animate4" class="animated">
+                <div id="element-to-animate7"class="divider-headline"></div>
                 </div>
                 </div>
-                <p class="my-description animate__animated animate__fadeInUp animate__delay-1s">I design and code beautiful websites for clients around the world. Feel free to roam around, and if you need a powerful website for yourself or your business, shoot me an email.</p>
-                <div class="down"><div class="main-btn-wrapper"><a href="#project1" class="main-btn btn-effect fade" data-sm-link-text="Let's go"><span>SEE MY WORK</span></a></div>
+                <p id="element-to-animate5" class="my-description animated">I design and code beautiful websites for clients around the world. Feel free to roam around, and if you need a powerful website for yourself or your business, shoot me an email.</p>
+                <div class="down"><div class="main-btn-wrapper animated" id="element-to-animate6"><a href="#project1" class="main-btn btn-effect" data-sm-link-text="Let's go"><span>SEE MY WORK</span></a></div>
                 </div>
             </div>
         </div>

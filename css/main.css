@@ -20,7 +20,8 @@ html, body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 19px;
+  width: 4px;
+  background-color: transparent;
 }
 
 /* Track */
@@ -31,7 +32,6 @@ html, body {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #333;
-  border: 8px solid white;
 }
 
 ::-moz-selection {
@@ -115,9 +115,9 @@ button:focus {
 }
 
 svg#logoload path {
-  stroke-dasharray: 150;
-  -webkit-animation: dashoffsets 4s linear infinite backwards;
-          animation: dashoffsets 4s linear infinite backwards;
+  stroke-dasharray: 200;
+  -webkit-animation: dashoffsets 9s linear infinite both;
+          animation: dashoffsets 9s linear infinite both;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
@@ -126,11 +126,11 @@ svg#logoload path {
   0% {
     opacity: 0;
   }
-  25% {
+  5% {
     opacity: 1;
   }
   100% {
-    stroke-dashoffset: 800;
+    stroke-dashoffset: 2100;
   }
 }
 
@@ -138,11 +138,11 @@ svg#logoload path {
   0% {
     opacity: 0;
   }
-  25% {
+  5% {
     opacity: 1;
   }
   100% {
-    stroke-dashoffset: 800;
+    stroke-dashoffset: 2100;
   }
 }
 
@@ -166,8 +166,8 @@ header {
   max-width: 50px;
   display: inline-block;
   position: fixed;
-  -webkit-transition: all .3s ease-in-out .5s;
-  transition: all .3s ease-in-out .5s;
+  -webkit-transition: all .3s ease-in-out .3s;
+  transition: all .3s ease-in-out .3s;
   -webkit-transform-origin: 25% 0;
   transform-origin: 25% 0;
   -webkit-animation: unswing .5s ease-in-out both;
@@ -177,8 +177,8 @@ header {
 
 .logo img {
   max-width: 35px;
-  -webkit-transition: all .3s ease-in-out .1s;
-  transition: all .3s ease-in-out .1s;
+  -webkit-transition: all .3s ease-in-out .3s;
+  transition: all .3s ease-in-out .3s;
 }
 
 .sign {
@@ -561,8 +561,8 @@ input:checked ~ nav > ul > li {
 
 .email-mobile {
   display: block;
-  -webkit-animation: fadeIn;
-          animation: fadeIn;
+  -webkit-animation: fadeit;
+          animation: fadeit;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   background-color: #333;
@@ -574,8 +574,10 @@ input:checked ~ nav > ul > li {
 
 .email-mobile-out {
   display: block;
-  -webkit-animation: fadeOut;
-          animation: fadeOut;
+  -webkit-animation: fadeout;
+          animation: fadeout;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   background-color: #333;
@@ -583,6 +585,24 @@ input:checked ~ nav > ul > li {
   position: relative;
   top: -67px;
   padding: 15px 0;
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 #hero-section {
@@ -664,13 +684,30 @@ input:checked ~ nav > ul > li {
 
 .shine {
   background: rgba(255, 255, 255, 0.1) -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1)), color-stop(0.5, #fff)) 0 0 no-repeat;
-  -webkit-background-size: 50px;
+  background-size: 50px;
   color: rgba(255, 255, 255, 0.1);
+  background-clip: border-box;
+  animation-name: shine;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
   -webkit-background-clip: border-box;
   -webkit-animation-name: shine;
   -webkit-animation-duration: 7s;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-fill-mode: both;
+}
+
+@keyframes shine {
+  0% {
+    background-position: top left;
+  }
+  50% {
+    background-position: top right;
+  }
+  100% {
+    background-position: top left;
+  }
 }
 
 @-webkit-keyframes shine {
@@ -714,20 +751,84 @@ input:checked ~ nav > ul > li {
   color: #333;
 }
 
-.fade {
+.animated-logo {
   opacity: 0;
-  -webkit-animation: fadeit 1s ease-in 1.3s forwards;
-          animation: fadeit 1s ease-in 1.3s forwards;
-  -webkit-transition: all .5s;
-  transition: all .5s;
 }
 
-.fade-headline-div {
+.fade-logo {
   opacity: 0;
-  -webkit-animation: fadediv 1s ease-in 1.6s forwards;
-          animation: fadediv 1s ease-in 1.6s forwards;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-animation: fadeit 1s both;
+          animation: fadeit 1s both;
+}
+
+.animated {
+  opacity: 0;
+}
+
+.faded-hero {
+  opacity: 0;
+  -webkit-animation: fadeheroup 1s both;
+          animation: fadeheroup 1s both;
+}
+
+@keyframes fadeheroup {
+  from {
+    -webkit-transform: translate3d(0, 30px, 0);
+            transform: translate3d(0, 30px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeheroup {
+  from {
+    -webkit-transform: translate3d(0, 30px, 0);
+            transform: translate3d(0, 30px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.faded-description {
+  opacity: 0;
+  -webkit-animation: fadedown 1s both;
+          animation: fadedown 1s both;
+}
+
+@keyframes fadedown {
+  from {
+    -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadedown {
+  from {
+    -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.fade {
+  opacity: 0;
+  -webkit-animation: fadeit 1s both;
+          animation: fadeit 1s both;
 }
 
 @-webkit-keyframes fadeit {
@@ -753,6 +854,34 @@ input:checked ~ nav > ul > li {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+.fade-headline-div {
+  opacity: 0;
+  -webkit-animation: fadeline 1s ease-in-out both;
+          animation: fadeline 1s ease-in-out both;
+}
+
+@-webkit-keyframes fadeline {
+  from {
+    opacity: 0;
+    max-width: 0;
+  }
+  to {
+    opacity: 1;
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeline {
+  from {
+    opacity: 0;
+    max-width: 0;
+  }
+  to {
+    opacity: 1;
+    max-width: 100%;
   }
 }
 
@@ -950,6 +1079,7 @@ input:checked ~ nav > ul > li {
       grid-column-start: 2;
   -ms-grid-column-span: 1;
   grid-column-end: 3;
+  grid-row: 1;
   -ms-grid-row: 1;
   grid-row-start: 1;
   -ms-grid-row-span: 2;
@@ -1014,6 +1144,7 @@ input:checked ~ nav > ul > li {
       grid-column-start: 1;
   -ms-grid-column-span: 1;
   grid-column-end: 2;
+  grid-row: 2;
   -ms-grid-row: 2;
   grid-row-start: 2;
   -ms-grid-row-span: 1;
@@ -1288,11 +1419,6 @@ input:checked ~ nav > ul > li {
   text-align: center;
 }
 
-.changeme:hover {
-  color: red;
-  background-color: red;
-}
-
 .skill-description h4 {
   margin-top: 40px;
   font-size: 22px;
@@ -1460,8 +1586,8 @@ input:checked ~ nav > ul > li {
   font-size: 14px;
   font-weight: 300;
   display: block;
-  -webkit-animation: fadeIn;
-          animation: fadeIn;
+  -webkit-animation: fadeit;
+          animation: fadeit;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
 }
@@ -1479,10 +1605,12 @@ input:checked ~ nav > ul > li {
   letter-spacing: 1px;
   font-size: 14px;
   font-weight: 300;
-  -webkit-animation: fadeOut;
-          animation: fadeOut;
+  -webkit-animation: fadeout;
+          animation: fadeout;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
 }
 
 .hide {
@@ -1596,9 +1724,11 @@ input:checked ~ nav > ul > li {
   }
   .right-block {
     -ms-grid-column: 1;
+    grid-column: 1;
     grid-column-start: 1;
     -ms-grid-column-span: 1;
     grid-column-end: 2;
+    grid-row: 2;
     -ms-grid-row: 2;
     grid-row-start: 2;
     -ms-grid-row-span: 1;
@@ -1612,10 +1742,12 @@ input:checked ~ nav > ul > li {
   }
   .paragraph-action {
     -ms-grid-column: 1;
+    grid-column: 1;
     grid-column-start: 1;
     -ms-grid-column-span: 1;
     grid-column-end: 2;
     -ms-grid-row: 3;
+    grid-row: 3;
     grid-row-start: 3;
     -ms-grid-row-span: 1;
     grid-row-end: 4;
@@ -1815,6 +1947,13 @@ input:checked ~ nav > ul > li {
     -webkit-transition: all .3s ease-in-out .1s;
     transition: all .3s ease-in-out .1s;
   }
+  .animated-logo {
+    opacity: 1;
+  }
+  .fade-logo {
+    -webkit-animation: none;
+            animation: none;
+  }
   .sign:hover {
     -webkit-transform: none;
             transform: none;
@@ -1836,9 +1975,13 @@ input:checked ~ nav > ul > li {
   }
   #burger {
     display: block;
+    -webkit-animation: fadeit 1s ease-in-out both;
+            animation: fadeit 1s ease-in-out both;
   }
   .logo {
     z-index: 4;
+    -webkit-animation: fadeit 1s ease-in-out both;
+            animation: fadeit 1s ease-in-out both;
   }
   .nav-menu {
     display: none;
@@ -1936,13 +2079,25 @@ input:checked ~ nav > ul > li {
 }
 
 .project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible {
-  -webkit-animation: fadebox 1s ease-in-out 0.1s forwards;
-          animation: fadebox 1s ease-in-out 0.1s forwards;
+  -webkit-animation-name: fadebox;
+          animation-name: fadebox;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .skill-box.isVisible, .second-footer.isVisible {
-  -webkit-animation: fadebox 1s ease-in-out 0.3s forwards;
-          animation: fadebox 1s ease-in-out 0.3s forwards;
+  -webkit-animation-name: fadebox;
+          animation-name: fadebox;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .do-title, .footer-title {
@@ -1955,10 +2110,14 @@ input:checked ~ nav > ul > li {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   opacity: 1;
-  -webkit-animation: fadeInUp;
-          animation: fadeInUp;
+  -webkit-animation: fadebox;
+          animation: fadebox;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .fade-divider {
@@ -1968,8 +2127,8 @@ input:checked ~ nav > ul > li {
 }
 
 .fade-divider.isVisible {
-  -webkit-animation: fadediv 1s ease-in-out 1s forwards;
-          animation: fadediv 1s ease-in-out 1s forwards;
+  -webkit-animation: fadediv 1s ease-in 1s forwards;
+          animation: fadediv 1s ease-in 1s forwards;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
 }
@@ -1995,8 +2154,8 @@ input:checked ~ nav > ul > li {
 @-webkit-keyframes fadebox {
   from {
     opacity: 0;
-    -webkit-transform: translateY(25px);
-            transform: translateY(25px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -2008,8 +2167,8 @@ input:checked ~ nav > ul > li {
 @keyframes fadebox {
   from {
     opacity: 0;
-    -webkit-transform: translateY(25px);
-            transform: translateY(25px);
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
   }
   to {
     opacity: 1;
