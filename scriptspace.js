@@ -28,7 +28,7 @@ $(window).on("load", function(){
       rotateLogo.classList.add("sign");
     } else {
       header.classList.remove("sticky");
-      anchor.setAttribute('href','index.html');
+      anchor.setAttribute('href','https://www.damgrela.com/');
       rotateLogo.classList.remove("sign");
     }
   }

@@ -37,7 +37,7 @@ function myFunction() {
     rotateLogo.classList.add("sign");
   } else {
     header.classList.remove("sticky");
-    anchor.setAttribute('href','index');
+    anchor.setAttribute('href','https://www.damgrela.com/');
     rotateLogo.classList.remove("sign");
   }
 }
