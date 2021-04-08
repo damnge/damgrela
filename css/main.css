@@ -1288,6 +1288,11 @@ input:checked ~ nav > ul > li {
   text-align: center;
 }
 
+.changeme:hover {
+  color: red;
+  background-color: red;
+}
+
 .skill-description h4 {
   margin-top: 40px;
   font-size: 22px;
