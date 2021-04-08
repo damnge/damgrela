@@ -140,7 +140,7 @@ color: white; }
             max-width: 50px;
             display: inline-block;
             position: fixed;
-            transition: all .3s ease-in-out .3s;
+            transition: all .3s;
            -webkit-transform-origin: 25% 0;      
             transform-origin: 25% 0;
             -webkit-animation: unswing .5s ease-in-out both;
@@ -150,14 +150,14 @@ color: white; }
 
             .logo img {
                 max-width: 35px;
-                transition: all .3s ease-in-out .3s;
+                transition: all .3s ease-in;
                
             }
             .sign {
-                transition: all .3s ease-in-out .3s;
+                transition: all .3s ease-in;
                 &:hover {
                     transform: rotate(180deg);
-                    transition: all .2s ease-in-out .3s;
+                    transition: all .3s
                 }
             }
 
@@ -191,12 +191,12 @@ color: white; }
 
           .rotated-logo {
             transform: rotate(180deg);
-            transition: all .3s ease-in-out .1s;
+            transition: all .2s;
           }
 
           .rotated-back {
               transform: rotate(0deg);
-              transition: all .3s ease-in-out .1s;
+              transition: all .2s;
           }
 
         

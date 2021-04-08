@@ -6,15 +6,12 @@ $(window).on("load", function(){
         $('html, body').css({
           'position':'relative'
         })},500);
-  });
-
-  $(document).ready(function() {
     setTimeout(function() {$("#animate-this1").addClass("faded-hero");},500);
     setTimeout(function() {$("#animate-this2").addClass("faded-hero");},800);
     setTimeout(function() {$("#header-description").addClass("faded-hero");},1100);
     setTimeout(function() {$("#animate-this4").addClass("fade");},1400);
     setTimeout(function() {$("#animate-this5").addClass("fade");},1700);
-    });
+  });
 
   
   
