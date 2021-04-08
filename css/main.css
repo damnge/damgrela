@@ -1944,8 +1944,8 @@ input:checked ~ nav > ul > li {
     -webkit-animation: none;
             animation: none;
     position: static;
-    -webkit-transition: all .3s ease-in-out .1s;
-    transition: all .3s ease-in-out .1s;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
   }
   .animated-logo {
     opacity: 1;
@@ -1961,8 +1961,8 @@ input:checked ~ nav > ul > li {
   .rotated-logo {
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
-    -webkit-transition: all .3s ease-in-out .1s;
-    transition: all .3s ease-in-out .1s;
+    -webkit-transition: all .3s;
+    transition: all .3s;
   }
   #nav-bar {
     margin: 0;

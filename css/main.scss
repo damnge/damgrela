@@ -1640,7 +1640,7 @@ color: white; }
     .logo{
         animation: none;
         position: static;
-        transition: all .3s ease-in-out .1s;
+        transition: all .3s ease-in;
     }
 
     .animated-logo {
@@ -1655,7 +1655,7 @@ color: white; }
 
     .rotated-logo {
         transform: rotate(135deg);
-        transition: all .3s ease-in-out .1s;
+        transition: all .3s;
       }
     
     #nav-bar {
