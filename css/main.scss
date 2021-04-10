@@ -1796,15 +1796,15 @@ input + label {
 
 // ANIMATION ON SCROLL
 
-.project, .skill-box, .second-footer, .phone, .screenshot-wantis, .screenshot {
+.project, .skill-box, .second-footer, .phone, .screenshot-wantis, .screenshot, .links {
     transition: opacity 1s;
     opacity: 0;
 
 }
-.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible {
+.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible, .links.isVisible {
     animation-name: fadebox;
     animation-duration: 1s;
-    animation-delay: 0.25s;
+    animation-delay: 0.3s;
     animation-fill-mode: both;
 }
    .skill-box.isVisible, .second-footer.isVisible {
@@ -1823,7 +1823,7 @@ input + label {
     animation: fadebox;
     animation-duration: 1s;
     animation-fill-mode: both;
-    animation-delay: 0.1s;
+    animation-delay: 0.3s;
 }
 
 .fade-divider {
@@ -1834,6 +1834,7 @@ input + label {
 .fade-divider.isVisible {
     animation: fadediv 1s ease-in 1s forwards;
     transition: opacity 1s;
+    animation-timing-function: ease-in;
 
 }
 

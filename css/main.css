@@ -2072,19 +2072,19 @@ input:checked ~ nav > ul > li {
   }
 }
 
-.project, .skill-box, .second-footer, .phone, .screenshot-wantis, .screenshot {
+.project, .skill-box, .second-footer, .phone, .screenshot-wantis, .screenshot, .links {
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
   opacity: 0;
 }
 
-.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible {
+.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible, .links.isVisible {
   -webkit-animation-name: fadebox;
           animation-name: fadebox;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
@@ -2116,8 +2116,8 @@ input:checked ~ nav > ul > li {
           animation-duration: 1s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .fade-divider {
@@ -2131,6 +2131,8 @@ input:checked ~ nav > ul > li {
           animation: fadediv 1s ease-in 1s forwards;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
 }
 
 @-webkit-keyframes fadediv {
