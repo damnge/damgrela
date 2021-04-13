@@ -891,8 +891,10 @@ input:checked ~ nav > ul > li {
 
 .main-btn-wrapper, .down {
   position: relative;
+  -moz-position: relative;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
 }
 
 .main-btn-wrapper::after {
@@ -905,10 +907,13 @@ input:checked ~ nav > ul > li {
   background-color: #333;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
+  -moz-transition: all .5s ease-in-out;
   opacity: 0;
 }
 
@@ -916,8 +921,10 @@ input:checked ~ nav > ul > li {
   height: 150px;
   -webkit-animation: go 3s ease-in-out infinite forwards;
           animation: go 3s ease-in-out infinite forwards;
+  -moz-animation: go 3s ease-in-out infinite forwards;
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
   opacity: 1;
 }
 
@@ -929,9 +936,11 @@ input:checked ~ nav > ul > li {
   color: #B7B4B9;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
   opacity: 0;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
 }
 
 .down:hover::after {
@@ -939,6 +948,7 @@ input:checked ~ nav > ul > li {
   font-family: "Encode Sans Expanded", sans-serif;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
   opacity: 1;
   font-size: 14px;
   letter-spacing: 3px;
