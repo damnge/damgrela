@@ -1,26 +1,22 @@
 $(window).on("load", function(){
-  setTimeout(function() {
     $(".loader").fadeOut("slow");
-   },500);
-    setTimeout(function() {
       $('html, body').css({
-        'position':'relative',
-      })},500);
-      setTimeout(function() {$("#animate-this1").addClass("faded-hero");},500);
-      setTimeout(function() {$("#animate-this2").addClass("faded-hero");},800);
-      setTimeout(function() {$("#header-description").addClass("faded-hero");},1100);
-      setTimeout(function() {$("#animate-this4").addClass("fade");},1400);
-      setTimeout(function() {$("#animate-this5").addClass("fade");},1700);
-      setTimeout(function() {$("#element-to-animate1").addClass("faded-hero");},500);
-      setTimeout(function() {$("#element-to-animate2").addClass("faded-hero");},900);
-      setTimeout(function() {$("#element-to-animate3").addClass("faded-hero");},1200);
-      setTimeout(function() {$("#element-to-animate4").addClass("fade-headline-div");},1600);
-      setTimeout(function() {$("#element-to-animate5").addClass("faded-description");},2000);
-      setTimeout(function() {$("#element-to-animate6").addClass("fade");},2500);
-      setTimeout(function() {$("#element-to-animate6").addClass("fade");},2500);
-      setTimeout(function() {$("#f-that-logo").addClass("fade-logo");},2700);
-      setTimeout(function() {$("#element-to-animate9").addClass("fade");},2700);
-      setTimeout(function() {$("#element-to-animate7").addClass("shine");},3000);
+        'position':'relative'});
+      setTimeout(function() {$("#animate-this1").addClass("faded-hero");},300);
+      setTimeout(function() {$("#animate-this2").addClass("faded-hero");},600);
+      setTimeout(function() {$("#header-description").addClass("faded-hero");},900);
+      setTimeout(function() {$("#animate-this4").addClass("fade");},1200);
+      setTimeout(function() {$("#animate-this5").addClass("fade");},1500);
+      setTimeout(function() {$("#element-to-animate1").addClass("faded-hero");},400);
+      setTimeout(function() {$("#element-to-animate2").addClass("faded-hero");},800);
+      setTimeout(function() {$("#element-to-animate3").addClass("faded-hero");},1100);
+      setTimeout(function() {$("#element-to-animate4").addClass("fade-headline-div");},1500);
+      setTimeout(function() {$("#element-to-animate5").addClass("faded-description");},1900);
+      setTimeout(function() {$("#element-to-animate6").addClass("fade");},2400);
+      setTimeout(function() {$("#element-to-animate6").addClass("fade");},2400);
+      setTimeout(function() {$("#f-that-logo").addClass("fade-logo");},2600);
+      setTimeout(function() {$("#element-to-animate9").addClass("fade");},2600);
+      setTimeout(function() {$("#element-to-animate7").addClass("shine");},2900);
 });
 
 

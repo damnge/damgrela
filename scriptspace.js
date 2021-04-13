@@ -1,16 +1,12 @@
 $(window).on("load", function(){
-    setTimeout(function() {
       $(".loader").fadeOut("slow");
-     },500);
-      setTimeout(function() {
         $('html, body').css({
-          'position':'relative'
-        })},500);
-    setTimeout(function() {$("#animate-this1").addClass("faded-hero");},500);
-    setTimeout(function() {$("#animate-this2").addClass("faded-hero");},800);
-    setTimeout(function() {$("#header-description").addClass("faded-hero");},1100);
-    setTimeout(function() {$("#animate-this4").addClass("fade");},1400);
-    setTimeout(function() {$("#animate-this5").addClass("fade");},1700);
+          'position':'relative'});
+    setTimeout(function() {$("#animate-this1").addClass("faded-hero");},300);
+    setTimeout(function() {$("#animate-this2").addClass("faded-hero");},600);
+    setTimeout(function() {$("#header-description").addClass("faded-hero");},900);
+    setTimeout(function() {$("#animate-this4").addClass("fade");},1200);
+    setTimeout(function() {$("#animate-this5").addClass("fade");},1500);
   });
 
   

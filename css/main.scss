@@ -1801,8 +1801,15 @@ input + label {
     opacity: 0;
 
 }
-.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible, .links.isVisible {
+.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible {
     animation-name: fadebox;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+
+.links.isVisible {
+    animation-name: fadediv;
     animation-duration: 1s;
     animation-delay: 0.3s;
     animation-fill-mode: both;

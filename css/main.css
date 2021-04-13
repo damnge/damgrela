@@ -2078,9 +2078,20 @@ input:checked ~ nav > ul > li {
   opacity: 0;
 }
 
-.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible, .links.isVisible {
+.project.isVisible, .phone.isVisible, .screenshot-wantis.isVisible, .screenshot.isVisible {
   -webkit-animation-name: fadebox;
           animation-name: fadebox;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.links.isVisible {
+  -webkit-animation-name: fadediv;
+          animation-name: fadediv;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-delay: 0.3s;
