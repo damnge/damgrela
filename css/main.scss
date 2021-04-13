@@ -784,6 +784,13 @@ color: white; }
         100%{transform: scale3d(1, 0, 1); }
 
       }
+      
+      @-moz-keyframes go {
+          0%{height: 0; transform: scale3d(1, 1, 1);}
+          50%{height:150px; transform: scale3d(1, 1, 1);}
+        100%{transform: scale3d(1, 0, 1); }
+
+      }
 
     
           .btn-effect {
@@ -1005,6 +1012,12 @@ color: white; }
         100%{transform: scale3d(0, 1, 1); }
 
       }
+      @-moz-keyframes go2 {
+        0%{width: 0; transform: scale3d(1, 1, 1);}
+        50%{width:200px; transform: scale3d(1, 1, 1);}
+      100%{transform: scale3d(0, 1, 1); }
+
+    }
 
         .button-project2 {
             pointer-events: auto;
@@ -1307,6 +1320,7 @@ color: white; }
         display: block;
         animation: fadeit;
         animation-duration: 1s;
+        animation-fill-mode: both;
 
     }
 
@@ -1325,7 +1339,7 @@ color: white; }
         font-weight: 300;
         animation:fadeout;
         animation-duration: 1s;
-        animation-fill-mode: backwards;
+        animation-fill-mode: both;
    }
 
    .hide {

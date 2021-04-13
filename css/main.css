@@ -1590,6 +1590,8 @@ input:checked ~ nav > ul > li {
           animation: fadeit;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .show {
@@ -1609,8 +1611,8 @@ input:checked ~ nav > ul > li {
           animation: fadeout;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 .hide {
