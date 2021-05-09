@@ -27,7 +27,7 @@ window.onbeforeunload = function () {
 // ANIMATE LOGO ON SCROLL
 
 function rotate() {
-  var img = document.getElementById("sign");
+  const img = document.getElementById("sign");
   img.classList.add("rotated-logo");
   setTimeout(function(){ img.classList.add("rotated-back")}, 900);
   setTimeout(function(){ img.classList.remove("rotated-logo")}, 1500);
@@ -88,13 +88,13 @@ document.body.removeChild(dummy);
 }
 
 function outFunc() {
-var tooltip = document.getElementById("myTooltip");
+const tooltip = document.getElementById("myTooltip");
 tooltip.innerHTML = "copy to clipboard";
 }
 
 function ShowSecond()
 {
-var show = document.getElementById("show-email");
+const show = document.getElementById("show-email");
 show.className="email-copied";
 setTimeout(function(){ show.className="show"; }, 3000);
 setTimeout(function() { show.className="hide"; }, 4000);
@@ -103,7 +103,7 @@ setTimeout(function() { show.className="hide"; }, 4000);
 
 function ShowMobile()
 {
-var show = document.getElementById("email-mobile");
+const show = document.getElementById("email-mobile");
 show.className="email-mobile";
 setTimeout(function(){ show.className="email-mobile-out"; }, 3000);
 setTimeout(function() { show.className="hide"; }, 4000);
@@ -117,6 +117,39 @@ $(document).ready(function(){
 
 
   // INTERSECTION OBSERVER
+
+  
+  const images = document.querySelectorAll("[data-src]");
+
+  function preloadImage (img) {
+      const src = img.getAttribute ("data-src");
+      if (!src) {
+          return;
+      }
+  
+      img.src = src;
+  } 
+  
+  const imgOptions = {
+      threshold: 0,
+      rootMargin: "0px 0px 0px 0px"
+  };
+  
+  const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+      entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+              return;
+          } else {
+              preloadImage(entry.target);
+              imgObserver.unobserve(entry.target);
+          }
+      })
+          
+  }, imgOptions);
+  
+  images.forEach(image => {
+      imgObserver.observe(image);
+  });
 
 // Options docs: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
 const options = {
