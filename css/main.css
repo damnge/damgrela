@@ -45,7 +45,7 @@ html, body {
 }
 
 h1 {
-  font-family: "Mulish", sans-serif;
+  font-family: "Encode Sans Expanded", sans-serif;
   font-size: 55px;
   color: #333;
   font-weight: 300;
@@ -662,9 +662,8 @@ input:checked ~ nav > ul > li {
   letter-spacing: 0.02em;
   text-align: left;
   position: relative;
-  text-transform: uppercase;
   margin: 0;
-  font-size: 40px;
+  font-size: 48px;
   line-height: 140%;
   font-weight: 200;
   color: #333;
@@ -672,7 +671,7 @@ input:checked ~ nav > ul > li {
 
 .main-h {
   font-weight: 700;
-  font-size: 55px;
+  font-size: 50px;
   text-transform: none;
   color: #333;
   line-height: 130%;
@@ -1629,15 +1628,15 @@ input:checked ~ nav > ul > li {
   display: none;
 }
 
-@media screen and (min-height: 1024px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .left-block h1, .do-title, .footer-title {
-    font-size: 5vh;
+    font-size: 55px;
   }
   .main-h {
-    font-size: 6vh;
+    font-size: 55px;
   }
   .sub-title {
-    font-size: 4vh;
+    font-size: 50px;
   }
   #hero-section {
     min-height: 95vh;
@@ -1820,6 +1819,16 @@ input:checked ~ nav > ul > li {
   }
 }
 
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .headline-container {
+    max-width: 140vh;
+    margin-bottom: 24px;
+  }
+  .sub-title {
+    font-size: 50px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   #nav-bar {
     padding-right: 30px;
@@ -1838,12 +1847,6 @@ input:checked ~ nav > ul > li {
   }
   .headline-container {
     max-width: 100%;
-  }
-  .sub-title {
-    font-size: 35px;
-  }
-  .main-h, .do-title, .left-block h1, h1 {
-    font-size: 46px;
   }
   .my-description {
     font-size: 18px;
@@ -1949,6 +1952,12 @@ input:checked ~ nav > ul > li {
     content: '';
     opacity: 0;
   }
+  .sub-title {
+    font-size: 7.5vw;
+  }
+  .main-h, .do-title, .footer-title, .left-block h1, h1 {
+    font-size: 9vw;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -2010,12 +2019,6 @@ input:checked ~ nav > ul > li {
   .headline-container, .my-description {
     max-width: 400px;
   }
-  .sub-title {
-    font-size: 28px;
-  }
-  .main-h, .do-title, .left-block h1, h1 {
-    font-size: 36px;
-  }
   .divider-headline {
     max-width: 400px;
   }
@@ -2046,24 +2049,12 @@ input:checked ~ nav > ul > li {
   .headline-container, .my-description {
     max-width: 350px;
   }
-  .sub-title {
-    font-size: 23px;
-  }
-  .main-h, .do-title, .left-block h1, h1 {
-    font-size: 34px;
-  }
   .divider-headline {
     max-width: 350px;
   }
 }
 
 @media screen and (max-width: 360px) {
-  .sub-title {
-    font-size: 23px;
-  }
-  .main-h, .left-block h1, h1 {
-    font-size: 33px;
-  }
   .do-title, .footer-title {
     font-size: 33px;
   }
@@ -2076,11 +2067,8 @@ input:checked ~ nav > ul > li {
 }
 
 @media screen and (max-width: 320px) {
-  .sub-title {
-    font-size: 20px;
-  }
-  .footer-title, .do-title {
-    font-size: 31px;
+  .hero-container {
+    padding-top: 90px;
   }
 }
 

@@ -48,7 +48,7 @@ color: white; }
     //    NAV BAR & HERO SECTION
 
        h1{
-           font-family: $font-header;
+           font-family: $font-text;
            font-size: 55px;
            color: #333;
            font-weight: 300;
@@ -544,9 +544,9 @@ color: white; }
                 letter-spacing: 0.02em;
                 text-align: left;
                 position: relative;
-                text-transform: uppercase;
+                // text-transform: uppercase;
                 margin:0;
-                font-size: 40px;
+                font-size: 48px;
                 line-height: 140%;
                 font-weight: 200;
                 color: #333;
@@ -554,7 +554,7 @@ color: white; }
 
            .main-h {
             font-weight: 700; 
-            font-size: 55px;
+            font-size: 50px;
             text-transform: none;
             color: #333;
             line-height: 130%;
@@ -563,7 +563,30 @@ color: white; }
             position: relative;
             margin:0;
            }
+        //    .ux {
+        //        min-width: 76px;
+        //        display: inline-block;
+        //    }
+        //    .ux:before {
+        //        content: '';
+        //        animation: uxui infinite 10s;
+        //        min-width: 76px;
+        //        opacity: 0;
+        //    }  
 
+        //    @keyframes uxui {
+        //        0% {
+        //            content: "UX";
+        //            min-width: 76px;
+        //            opacity: 1;
+        //        }
+        //        50% { content: '';
+        //             max-width:76px;
+        //             opacity: 0;
+        //     }
+        //     75%{ content: 'UI';
+        //     opacity:1;}
+        //    }
            .shine {
             background: rgba(255, 255, 255,0.1) -webkit-gradient(
                 linear,
@@ -1356,25 +1379,34 @@ color: white; }
        display: none;
    }
 
-//    MOBILE RESPONSIVE
-@media screen and (min-height:1024px){
+
+// RESPONSIVE MEDIA
+
+// TABLET
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
     .left-block h1, .do-title, .footer-title {
-        font-size: 5vh;
+        font-size: 55px;
     }
     .main-h
      {
-        font-size: 6vh;
+        font-size: 55px;
     }
     .sub-title {
-        font-size: 4vh;
+        font-size: 50px;
     }
 
     #hero-section{
         min-height: 95vh;
     }
 
-    
 }
+
+// DESKTOP 
 
 @media screen and (max-width: 1100px) {
 
@@ -1530,6 +1562,19 @@ color: white; }
 
 }
 
+@media screen and (max-width: 900px)
+and (orientation: landscape) {
+
+.headline-container {
+    max-width: 140vh;
+    margin-bottom: 24px;
+}
+.sub-title {
+    font-size: 50px;
+}
+}
+
+
 @media screen and (max-width: 767px) {
  
     #nav-bar{
@@ -1554,12 +1599,6 @@ color: white; }
         max-width: 100%;
     }
 
-    .sub-title {
-        font-size: 35px;
-    }
-    .main-h, .do-title, .left-block h1, h1 {
-        font-size: 46px;
-    }
 
     .my-description {
         font-size:18px;
@@ -1623,6 +1662,8 @@ color: white; }
 
 }
 
+//    MOBILE RESPONSIVE
+
 @media screen and (max-width: 600px) {
     
     #wantis-splash {
@@ -1656,6 +1697,12 @@ color: white; }
       content: '';
     opacity: 0;
   }
+  .sub-title {
+    font-size: 7.5vw;
+}
+.main-h, .do-title, .footer-title, .left-block h1, h1 {
+    font-size: 9vw;
+}
 
 }
 
@@ -1720,13 +1767,13 @@ color: white; }
     max-width: 400px;
 }
 
-.sub-title {
-    font-size: 28px;
-}
+// .sub-title {
+//     font-size: 36px;
+// }
 
-.main-h, .do-title, .left-block h1, h1{
-    font-size:36px;
-}
+// .main-h, .do-title, .left-block h1, h1{
+//     font-size:36px;
+// }
 
 .divider-headline {
     max-width: 400px;
@@ -1769,13 +1816,13 @@ input + label {
     max-width: 350px;
 }
 
-.sub-title {
-    font-size: 23px;
-}
+// .sub-title {
+//     font-size: 30px;
+// }
 
-.main-h, .do-title, .left-block h1, h1{
-    font-size:34px;
-}
+// .main-h, .do-title, .left-block h1, h1{
+//     font-size:34px;
+// }
 
 .divider-headline {
     max-width: 350px;
@@ -1785,12 +1832,12 @@ input + label {
 @media screen and (max-width: 360px){
 
 
-    .sub-title {
-        font-size: 23px;
-    }
-    .main-h, .left-block h1, h1 {
-        font-size: 33px;   
-    }
+    // .sub-title {
+    //     font-size: 28px;
+    // }
+    // .main-h, .left-block h1, h1 {
+    //     font-size: 33px;   
+    // }
 
     .do-title, .footer-title {
         font-size: 33px;
@@ -1810,12 +1857,14 @@ input + label {
 }
 
 @media screen and (max-width: 320px) {
-    .sub-title {
-        font-size: 20px;
-    }
-    .footer-title, .do-title {
-        font-size: 31px;
-    }
+    // .sub-title {
+    //     font-size: 24px;
+    // }
+    // .main-h, .footer-title, .do-title {
+    //     font-size: 29px;
+    // }
+    .hero-container {
+        padding-top: 90px;}
 }
 
 // ANIMATION ON SCROLL
