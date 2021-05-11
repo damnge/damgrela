@@ -663,7 +663,7 @@ input:checked ~ nav > ul > li {
   text-align: left;
   position: relative;
   margin: 0;
-  font-size: 48px;
+  font-size: 50px;
   line-height: 140%;
   font-weight: 200;
   color: #333;
