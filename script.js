@@ -58,7 +58,7 @@ function myFunction() {
 
 $(document).ready(function() {
 
-var mailto = $('a[href^=mailto]');
+const mailto = $('a[href^=mailto]');
 
 // Disable opening your email client. yuk.
 $('a[href^=mailto]').click(function() {
@@ -67,10 +67,10 @@ return false;
 // On click, get href and remove 'mailto:' from value
 // Store email address in a variable.
 mailto.click(function() {
-var href = $(this).attr('href');
-var email = href.replace('mailto:', '');
+const href = $(this).attr('href');
+const email = href.replace('mailto:', '');
 copyToClipboard(email);
-var tooltip = document.getElementById("myTooltip");
+const tooltip = document.getElementById("myTooltip");
 tooltip.innerHTML = "e-mail copied";
 setTimeout(function(){window.open("mailto:dam@damgrela.com")},1000);
 });
@@ -79,7 +79,7 @@ setTimeout(function(){window.open("mailto:dam@damgrela.com")},1000);
 
 // Copies the email variable to clipboard
 function copyToClipboard(text) {
-var dummy = document.createElement("input");
+const dummy = document.createElement("input");
 document.body.appendChild(dummy);
 dummy.setAttribute('value', text);
 dummy.select();
@@ -117,8 +117,7 @@ $(document).ready(function(){
 
 
   // INTERSECTION OBSERVER
-
-  
+ 
 
 // Options docs: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
 const options = {
