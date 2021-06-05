@@ -1,3 +1,4 @@
+
 $(window).on("load", function(){
     $(".loader").fadeOut("slow");
       $('html, body').css({
@@ -18,6 +19,8 @@ $(window).on("load", function(){
       setTimeout(function() {$("#element-to-animate9").addClass("fade");},2600);
       setTimeout(function() {$("#element-to-animate7").addClass("shine");},2900);
 });
+
+
 
 
 window.onbeforeunload = function () {
@@ -119,31 +122,36 @@ $(document).ready(function(){
   // INTERSECTION OBSERVER
  
 
-// Options docs: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Intersection_observer_options
-const options = {
-  root: null, // use the document's viewport as the container
-  rootMargin: '0px', // % or px - offsets added to each side of the intersection 
-  threshold: 0.1 // percentage of the target element which is visible
-}
-const playThis = document.querySelectorAll('.observer-play');
-// Callback docs: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#Targeting_an_element_to_be_observed
-let callback = (entries) => { 
-	entries.forEach(entry => {
-		
-		// If entry (box) is visible - according with the params set in `options`
-		// then adds `isVisible` class to box
-		// otherwise removes `isVisible` class
-		
-		if(entry.isIntersecting) {
-			entry.target.classList.add('isVisible');
-		} 
+const images = document.querySelectorAll(".observer-play");
 
-	});
-}
+function preloadImage (img) {
+    const src = img.getAttribute ("data-src");
+    if (!src) {
+        return;
+    }
 
-// Create the intersection observer instance by calling its constructor and passing it a
-// callback function to be run whenever a threshold is crossed in one direction or the other:
-let observer = new IntersectionObserver(callback, options);
+    img.src = src;
+} 
 
+const imgOptions = {
+    root: null,
+    threshold: 0.1,
+    rootMargin: "0px 0px 0px 0px"
+};
 
-	playThis.forEach(snap => { observer.observe(snap) });
+const imgObserver = new IntersectionObserver((entries, imgObserver) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            preloadImage(entry.target);
+            entry.target.classList.add('isVisible');
+            imgObserver.unobserve(entry.target);
+        }
+    })
+        
+}, imgOptions);
+
+images.forEach(image => {
+    imgObserver.observe(image);
+});
