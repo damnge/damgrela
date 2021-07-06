@@ -20,8 +20,9 @@ const hero8 = document.getElementById("element-to-animate8")
 const hero9 = document.getElementById("element-to-animate9")
 
 
-window.onload = function() {
-    document.body.style.position = "relative"
+document.addEventListener("DOMContentLoaded", function(){
+    
+  document.body.style.position = "relative"
 
     setTimeout(function() {loader.classList.add("hide-loader")}, 100)
     setTimeout(function() {ani0.classList.add("fade")},200);
@@ -42,7 +43,7 @@ window.onload = function() {
     setTimeout(function() {hero8.classList.add("fade");},2600);
     setTimeout(function() {hero9.classList.add("shine");},2900);
 
-}
+}, false)
 
 
 // ANIMATE LOGO ON SCROLL
