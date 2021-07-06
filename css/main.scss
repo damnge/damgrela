@@ -12,8 +12,9 @@ $font-header:'Mulish', sans-serif;
 
   html {
       overflow-x: hidden;
+      scroll-behavior: smooth;
   }
-    html, body {
+     body {
         height: 100%;
         margin: 0;
         background-color: white;
@@ -21,6 +22,10 @@ $font-header:'Mulish', sans-serif;
         scroll-behavior: smooth;
         position: fixed;
        }
+
+    //    .body-position {
+    //        position: relative;
+    //    }
 
 
        /* width */
@@ -204,6 +209,10 @@ color: white; }
             display: flex;
             position: relative;
             float: right;
+        }
+        #animate-nav{
+            opacity: 0;
+            transition: 0.3s;
         }
 
     
@@ -1377,6 +1386,13 @@ color: white; }
 
    .hide {
        display: none;
+   }
+
+   .hide-loader {
+    animation:fadeout;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    z-index: 0;
    }
 
 
