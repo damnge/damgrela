@@ -22,7 +22,6 @@ const hero9 = document.getElementById("element-to-animate9")
 
 document.addEventListener("DOMContentLoaded", function(){
     
-  
     setTimeout(function() {document.body.style.position = "relative" }, 300)
     setTimeout(function() {loader.classList.add("hide-loader")}, 300)
     setTimeout(function() {ani0.classList.add("fade")},300);
@@ -90,7 +89,7 @@ function getEmail() {
   
   const tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "e-mail copied";
-  setTimeout(function(){window.open("mailto:dam@damgrela.com","_blank")},1000);
+  setTimeout(function(){window.open("mailto:dam@damgrela.com")},1000);
 
 }
 
