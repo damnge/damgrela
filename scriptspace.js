@@ -92,7 +92,7 @@ function getEmail() {
   
   const tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "e-mail copied";
-  setTimeout(function(){window.open("mailto:dam@damgrela.com","_blank")},1000);
+  setTimeout(function(){window.open("mailto:dam@damgrela.com")},1000);
 
 }
 
