@@ -21,30 +21,32 @@ const hero8 = document.getElementById("element-to-animate8")
 const hero9 = document.getElementById("element-to-animate9")
 
 
+
 document.addEventListener("DOMContentLoaded", function(){
     
-  document.body.style.position = "relative"
-
-    setTimeout(function() {loader.classList.add("hide-loader")}, 100)
-    setTimeout(function() {ani0.classList.add("fade")},200);
-    setTimeout(function() {ani1.classList.add("faded-hero")},300);
-    setTimeout(function() {ani2.classList.add("faded-hero")},600);
-    setTimeout(function() {ani3.classList.add("faded-hero")},900);
-    setTimeout(function() {ani4.classList.add("fade")},1200);
-    setTimeout(function() {ani5.classList.add("fade")},1500);
+    setTimeout(function() {document.body.style.position = "relative" }, 300)
+    setTimeout(function() {loader.classList.add("hide-loader")}, 300)
+    setTimeout(function() {loader.classList.add("hide-loader")}, 300)
+    setTimeout(function() {ani0.classList.add("fade")},300);
+    setTimeout(function() {ani1.classList.add("faded-hero")},400);
+    setTimeout(function() {ani2.classList.add("faded-hero")},700);
+    setTimeout(function() {ani3.classList.add("faded-hero")},1000);
+    setTimeout(function() {ani4.classList.add("fade")},1300);
+    setTimeout(function() {ani5.classList.add("fade")},1600);
 
     
-    setTimeout(function() {hero1.classList.add("faded-hero");},400);
-    setTimeout(function() {hero2.classList.add("faded-hero");},800);
-    setTimeout(function() {hero3.classList.add("faded-hero");},1100);
-    setTimeout(function() {hero4.classList.add("fade-headline-div");},1500);
-    setTimeout(function() {hero5.classList.add("faded-description");},1900);
-    setTimeout(function() {hero6.classList.add("fade");},2400);
-    setTimeout(function() {hero7.classList.add("fade-logo");},2600);
-    setTimeout(function() {hero8.classList.add("fade");},2600);
-    setTimeout(function() {hero9.classList.add("shine");},2900);
+    setTimeout(function() {hero1.classList.add("faded-hero");},500);
+    setTimeout(function() {hero2.classList.add("faded-hero");},900);
+    setTimeout(function() {hero3.classList.add("faded-hero");},1200);
+    setTimeout(function() {hero4.classList.add("fade-headline-div");},1600);
+    setTimeout(function() {hero5.classList.add("faded-description");},2000);
+    setTimeout(function() {hero6.classList.add("fade");},2500);
+    setTimeout(function() {hero7.classList.add("fade-logo");},2700);
+    setTimeout(function() {hero8.classList.add("fade");},2700);
+    setTimeout(function() {hero9.classList.add("shine");},3000);
 
 }, false)
+
 
 // ANIMATE LOGO ON SCROLL
 
