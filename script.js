@@ -1,31 +1,51 @@
+// ANIMATE HERO SECTION
+
+const loader = document.getElementById("spinner")
+
+const ani0 = document.getElementById("animate-nav")
+const ani1 = document.getElementById("animate-this1")
+const ani2 = document.getElementById("animate-this2")
+const ani3 = document.getElementById("header-description")
+const ani4 = document.getElementById("animate-this4")
+const ani5 = document.getElementById("animate-this5")
+
+const hero1 = document.getElementById("element-to-animate1")
+const hero2 = document.getElementById("element-to-animate2")
+const hero3 = document.getElementById("element-to-animate3")
+const hero4 = document.getElementById("element-to-animate4")
+const hero5 = document.getElementById("element-to-animate5")
+const hero6 = document.getElementById("element-to-animate6")
+const hero7 = document.getElementById("f-that-logo")
+const hero8 = document.getElementById("element-to-animate8")
+const hero9 = document.getElementById("element-to-animate9")
 
 
-$(window).on("load", function(){
-    $(".loader").fadeOut("slow");
-      $('html, body').css({
-        'position':'relative'});
-      setTimeout(function() {$("#animate-this1").addClass("faded-hero");},300);
-      setTimeout(function() {$("#animate-this2").addClass("faded-hero");},600);
-      setTimeout(function() {$("#header-description").addClass("faded-hero");},900);
-      setTimeout(function() {$("#animate-this4").addClass("fade");},1200);
-      setTimeout(function() {$("#animate-this5").addClass("fade");},1500);
-      setTimeout(function() {$("#element-to-animate1").addClass("faded-hero");},400);
-      setTimeout(function() {$("#element-to-animate2").addClass("faded-hero");},800);
-      setTimeout(function() {$("#element-to-animate3").addClass("faded-hero");},1100);
-      setTimeout(function() {$("#element-to-animate4").addClass("fade-headline-div");},1500);
-      setTimeout(function() {$("#element-to-animate5").addClass("faded-description");},1900);
-      setTimeout(function() {$("#element-to-animate6").addClass("fade");},2400);
-      setTimeout(function() {$("#element-to-animate6").addClass("fade");},2400);
-      setTimeout(function() {$("#f-that-logo").addClass("fade-logo");},2600);
-      setTimeout(function() {$("#element-to-animate9").addClass("fade");},2600);
-      setTimeout(function() {$("#element-to-animate7").addClass("shine");},2900);
-});
+document.addEventListener("DOMContentLoaded", function(){
+    
+  document.body.style.position = "relative"
+
+    setTimeout(function() {loader.classList.add("hide-loader")}, 100)
+    setTimeout(function() {ani0.classList.add("fade")},200);
+    setTimeout(function() {ani1.classList.add("faded-hero")},300);
+    setTimeout(function() {ani2.classList.add("faded-hero")},600);
+    setTimeout(function() {ani3.classList.add("faded-hero")},900);
+    setTimeout(function() {ani4.classList.add("fade")},1200);
+    setTimeout(function() {ani5.classList.add("fade")},1500);
+
+    
+    setTimeout(function() {hero1.classList.add("faded-hero");},400);
+    setTimeout(function() {hero2.classList.add("faded-hero");},800);
+    setTimeout(function() {hero3.classList.add("faded-hero");},1100);
+    setTimeout(function() {hero4.classList.add("fade-headline-div");},1500);
+    setTimeout(function() {hero5.classList.add("faded-description");},1900);
+    setTimeout(function() {hero6.classList.add("fade");},2400);
+    setTimeout(function() {hero7.classList.add("fade-logo");},2600);
+    setTimeout(function() {hero8.classList.add("fade");},2600);
+    setTimeout(function() {hero9.classList.add("shine");},2900);
+
+}, false)
 
 
-window.onbeforeunload = function () {
-  setTimeout(function(){
-  window.scrollTo(0, 0);}, 1000);
-}
 // ANIMATE LOGO ON SCROLL
 
 function rotate() {
@@ -37,13 +57,14 @@ function rotate() {
   
   }
 
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {myLogoFunction()};
+
 const anchor = document.getElementById("logo-link");   
 const header = document.getElementById("logo");
 const rotateLogo = document.getElementById("sign");
 const sticky = header.offsetTop;
 
-function myFunction() {
+function myLogoFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
     anchor.setAttribute('href','#hero-section');
@@ -58,26 +79,26 @@ function myFunction() {
 
 // COPY MY EMAIL 
 
-$(document).ready(function() {
+const myEmailBtnTop = document.getElementById('myEmailTop')
+const myEmailBtnMob = document.getElementById('myEmailMob')
+const myEmailBtnBot = document.getElementById('myEmailBot')
 
-const mailto = $('a[href^=mailto]');
+function getEmail() {
+  const email = myEmailBtnTop.getAttribute('href')
+  const shortEmail = email.substring(7)
+  copyToClipboard(shortEmail)
+  
+  const tooltip = document.getElementById("myTooltip");
+  tooltip.innerHTML = "e-mail copied";
+  setTimeout(function(){window.open("mailto:dam@damgrela.com","_blank")},1000);
 
-// Disable opening your email client. yuk.
-$('a[href^=mailto]').click(function() {
-return false; 
-})
-// On click, get href and remove 'mailto:' from value
-// Store email address in a variable.
-mailto.click(function() {
-const href = $(this).attr('href');
-const email = href.replace('mailto:', '');
-copyToClipboard(email);
-const tooltip = document.getElementById("myTooltip");
-tooltip.innerHTML = "e-mail copied";
-setTimeout(function(){window.open("mailto:dam@damgrela.com")},1000);
-});
+}
 
-});
+myEmailBtnTop.addEventListener("click",getEmail)
+myEmailBtnMob.addEventListener("click", getEmail)
+myEmailBtnBot.addEventListener("click", getEmail)
+
+
 
 // Copies the email variable to clipboard
 function copyToClipboard(text) {
@@ -112,10 +133,6 @@ setTimeout(function() { show.className="hide"; }, 4000);
 
 }
 
-
-$(document).ready(function(){
-  $(this).scrollTop(0);
-});
 
 
   // INTERSECTION OBSERVER
