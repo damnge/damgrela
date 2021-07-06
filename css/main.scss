@@ -23,11 +23,6 @@ $font-header:'Mulish', sans-serif;
         position: fixed;
        }
 
-    //    .body-position {
-    //        position: relative;
-    //    }
-
-
        /* width */
 ::-webkit-scrollbar {
     width: 4px;
@@ -210,6 +205,7 @@ color: white; }
             position: relative;
             float: right;
         }
+
         #animate-nav{
             opacity: 0;
             transition: 0.3s;
