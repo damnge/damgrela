@@ -89,8 +89,6 @@ function getEmail() {
   
   const tooltip = document.getElementById("myTooltip");
   tooltip.innerHTML = "e-mail copied";
-  setTimeout(function(){window.open("mailto:dam@damgrela.com")},1000);
-
 }
 
 myEmailBtnTop.addEventListener("click",getEmail)
